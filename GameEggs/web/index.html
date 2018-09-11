@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Scrambled eggs</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" rel="stylesheet"><!--Link a nuestro estilos (css)-->
+    </head>
+    <body>
+        <!--DIV PRINCIPAL (CONTAINER)-->
+        <div id="container">
+            <!--DIV (MUESTRA DE INFORMACIÓN AL USUARIO)-->
+            <div id="score_help">Puntaje:
+                <span id="score">0</span> | Vida:
+                <span id="life"></span> | Use el mouse para jugar
+            </div>
+            <!--DIV( RAMA VERTICAL) PARA QUE SE POSICIONEN NUESTRA GALLINAS(HEN)-->
+            <div id="branch"></div>
+
+            <!--3 DIV( GALLINA) DE CLASE 'HEN' SE POSICIONAN EN DIV(BRANCH)-->
+            <div id="hen1" class="hen"></div>
+            <div id="hen2" class="hen"></div>
+            <div id="hen3" class="hen"></div>
+
+            <!--3 DIV( HUEVOS) DE CLASE 'EGG' SE POSICIONAN EN DIV(HEN && BRANCH)-->
+            <div id="egg1" class="egg" data-bullseye='1'></div>
+            <div id="egg2" class="egg" data-bullseye='2'></div>
+            <div id="egg3" class="egg" data-bullseye='3'></div>
+
+            <!--3 DIV( HUEVOS) DE CLASE 'EGG' SE POSICIONAN EN DIV(HEN && BRANCH)-->
+            <div id="bullseye1" class="bullseye"></div>
+            <div id="bullseye2" class="bullseye"></div>
+            <div id="bullseye3" class="bullseye"></div>
+
+            <!--1 DIV( OBJECTO BASCKET) + CONTEO DE PUNTAJES-->
+            <div id="basket">
+                <span id="score_1"></span>
+            </div>
+            <!--1 DIV( FLOOR - PISO) PARA DETECTAR COLISIONES-->
+            <div id="floor"></div>
+
+            <!--BOTON PARA REINICIAR NUESTRO GAME-->
+            <button id="restart">Volver a jugar</button>
+        </div>
+        <script src="jquery.min.js"></script>
+        <script src="collision_detection.js"></script>
+        <script src="variables.js"></script>
+        <script src="functions.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
